@@ -143,15 +143,16 @@ export const prepareInstructions = ({
   jobDescription: string;
   AIResponseFormat: string;
 }) =>
-  `You are an expert in ATS (Applicant Tracking System) and resume analysis.
-  Please analyze and rate this resume and suggest how to improve it.
-  The rating can be low if the resume is bad.
-  Be thorough and detailed. Don't be afraid to point out any mistakes or areas for improvement.
-  If there is a lot to improve, don't hesitate to give low scores. This is to help the user to improve their resume.
-  If available, use the job description for the job user is applying to to give more detailed feedback.
-  If provided, take the job description into consideration.
-  The job title is: ${jobTitle}
-  The job description is: ${jobDescription}
-  Provide the feedback using the following format: ${AIResponseFormat}
-  Return the analysis as a JSON object, without any other text and without the backticks.
-  Do not include any other text or comments.`;
+  `Você é um especialista em ATS (Sistema de Rastreamento de Candidatos) e análise de currículos.
+  Por favor, analise e avalie este currículo e sugira como melhorá-lo.
+  A avaliação pode ser baixa se o currículo não estiver bom.
+  Seja minucioso e detalhado. Não hesite em apontar erros ou áreas para melhoria.
+  Se houver muito a melhorar, não hesite em dar notas baixas. Isso é para ajudar o usuário a melhorar seu currículo.
+  Se disponível, use a descrição da vaga para a qual o usuário está se candidatando para dar um feedback mais detalhado.
+  Se fornecida, leve em consideração a descrição da vaga.
+  O cargo é: ${jobTitle}
+  A descrição da vaga é: ${jobDescription}
+  Forneça o feedback usando o seguinte formato: ${AIResponseFormat}
+  Retorne a análise como um objeto JSON, sem nenhum outro texto e sem os backticks.
+  Não inclua nenhum outro texto ou comentários.
+  Forneça todo o feedback em português do Brasil.`;

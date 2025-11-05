@@ -5,10 +5,7 @@ import Details from "~/components/Details";
 import Summary from "~/components/Summary";
 import { usePuterStore } from "~/lib/puter";
 
-export const meta = () => [
-	{ title: "Resumind | Review" },
-	{ name: "description", content: "Detailed overview of your resume" },
-];
+export const meta = () => [{ title: "Resumind | Análise" }, { name: "description", content: "Visão detalhada do seu currículo" }];
 
 const resume = () => {
 	const { auth, isLoading, fs, kv } = usePuterStore();
@@ -54,7 +51,7 @@ const resume = () => {
 			<nav className="resume-nav">
 				<Link to="/" className="back-button">
 					<img src="/icons/back.svg" alt="logo" className="w-2.5 h-2.5" />
-					<span className="text-gray-800 text-sm font-semibold">Back to Homepage</span>
+					<span className="text-gray-800 text-sm font-semibold">Voltar para a Página Inicial</span>
 				</Link>
 			</nav>
 			<div className="flex flex-row w-full max-lg:flex-col-reverse">
@@ -62,17 +59,13 @@ const resume = () => {
 					{imageUrl && resumeUrl && (
 						<div className="animate-in fade-in duration-1000 gradient-border max-sm:m-0 h-[90%] max-wxl:h-fit w-fit">
 							<a href={resumeUrl} target="_blank" rel="noopener noreferrer">
-								<img
-									src={imageUrl}
-									className="w-full h-full object-contain rounded-2xl"
-									title="resume"
-								/>
+								<img src={imageUrl} className="w-full h-full object-contain rounded-2xl" title="currículo" />
 							</a>
 						</div>
 					)}
 				</section>
 				<section className="feedback-section">
-					<h2 className="text-4xl !text-black font-bold">Resume Review</h2>
+					<h2 className="text-4xl !text-black font-bold">Análise do Currículo</h2>
 					{feedback ? (
 						<div className="flex flex-col gap-8 animate-in fade-in duration-1000">
 							<Summary feedback={feedback} />

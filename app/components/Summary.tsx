@@ -26,17 +26,15 @@ const Summary = ({ feedback }: { feedback: Feedback }) => {
 				<ScoreGauge score={feedback.overallScore} />
 
 				<div className="flex flex-col gap-2">
-					<h2 className="text-2xl font-bold">Your Resume Score</h2>
-					<p className="text-sm text-gray-500">
-						This score is calculated based on the variables listed below
-					</p>
+					<h2 className="text-2xl font-bold">Pontuação do seu Currículo</h2>
+					<p className="text-sm text-gray-500">Esta pontuação é calculada com base nas variáveis listadas abaixo</p>
 				</div>
 			</div>
 
-			<Category title="Tone & Style" score={feedback.toneAndStyle.score} />
-			<Category title="Content" score={feedback.content.score} />
-			<Category title="Structure" score={feedback.structure.score} />
-			<Category title="Skills" score={feedback.skills.score} />
+			<Category title="Tom & Estilo" score={feedback.toneAndStyle.score} />
+			<Category title="Conteúdo" score={feedback.content.score} />
+			<Category title="Estrutura" score={feedback.structure.score} />
+			<Category title="Habilidades" score={feedback.skills.score} />
 		</div>
 	);
 };

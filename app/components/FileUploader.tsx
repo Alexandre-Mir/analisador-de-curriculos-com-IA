@@ -60,9 +60,9 @@ const FileUploader = ({ onFileSelect }: FileUploaderProps) => {
 								<img src="/icons/info.svg" alt="upload" className="size-20" />
 							</div>
 							<p className="text-lg text-gray-500">
-								<span className="font-semibold">Click to upload</span> or drag and drop
+								<span className="font-semibold">Clique para enviar</span> ou arraste e solte
 							</p>
-							<p className="text-lg text-gray-500">PDF (max {formatSize(maxFileSize)})</p>
+							<p className="text-lg text-gray-500">PDF (máximo {formatSize(maxFileSize)})</p>
 						</div>
 					)}
 				</div>
