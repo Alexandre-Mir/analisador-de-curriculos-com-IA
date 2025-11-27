@@ -1,4 +1,4 @@
-# [Cover](./public/images/Cover.png)
+# ![Cover](./public/images/Cover.png)
 
 ## Descrição
 
