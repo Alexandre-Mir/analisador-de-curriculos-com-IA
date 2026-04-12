@@ -6,8 +6,15 @@ import { useNavigate, Link } from "react-router";
 import { useEffect } from "react";
 import { useState } from "react";
 
-export function meta({}: Route.MetaArgs) {
+export function links() {
 	return [
+		{ rel: "preload", href: "/images/bg-main.svg", as: "image" },
+		{ rel: "preload", href: "/images/resume-scan-2.gif", as: "image" },
+	];
+}
+
+export function meta({}: Route.MetaArgs) {
+		return [
 		{ title: "Resumind" },
 		{
 			name: "description",
@@ -55,7 +62,7 @@ export default function Home() {
 
 				{loadingResumes && (
 					<div className="flex flex-col items-center justify-center">
-						<img src="/images/resume-scan-2.gif" className="w-[200px]" />
+						<img src="/images/resume-scan-2.gif" fetchPriority="high" className="w-[200px]" alt="Carregando Currículos" />
 					</div>
 				)}
 
